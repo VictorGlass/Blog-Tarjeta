@@ -1,0 +1,130 @@
+:root {
+
+    /*Paleta de Colores*/
+    --primario: hsl(47, 88%, 63%);
+    --blanco: hsl(0, 0%, 100%);
+    --gris: hsl(0, 0%, 50%);
+    --negro: hsl(0, 0%, 7%);
+
+    /*Tipografia*/
+    --fuentePrincipla: "Figtree", sans-serif;;
+}
+
+/*Parametros Globales*/
+html {
+    box-sizing: border-box;
+    font-size: 62,5%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    font-family: var(--fuentePrincipla);
+    font-weight: 400;
+    background-color: var(--primario);
+    color: var(--negro);
+}
+
+/*Especificaciones Contenedor*/
+.contenedor-imagen {
+    max-width: 46.3rem;
+    background-color: var(--blanco);
+    margin: 5rem auto;
+    padding: 3rem;
+
+    /*Habilitamos Flex*/
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 3px solid var(--negro);
+    border-radius: 2rem;
+    box-shadow: 0.7rem 0.8rem 0 var(--negro);
+    transition: all 0.2s;
+}
+
+/*Efecto sombra hover*/
+.contenedor-imagen:hover {
+    box-shadow: 1.2rem 1.3rem 0 var(--negro);
+}
+/* Media Query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .contenedor-imagen {
+        width: 80%; /* Ajuste para dispositivos más pequeños */
+    }
+}
+
+
+/*Imagen*/
+.img-1 {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+/*Contenido*/
+.contenedor-contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-weight: 600;
+}
+
+/*Contenido texto*/
+.contenido-texto {
+    background-color: var(--primario);
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    font-weight: 900;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.contenido-texto:hover {
+    color: var(--blanco);
+    background-color: var(--gris);
+    box-shadow: 0.5rem 0.5rem 0 var(--negro);
+}
+
+/*Parametros sencillos*/
+.titulo {
+    cursor: pointer;
+}
+.parrafo {
+    color: var(--gris);
+}
+.persona {
+    display: flex;
+    gap: 2.4rem;
+    align-items: center;
+}
+
+/*Parametros necesarios para IMG*/
+.img-persona {
+    border-radius: 50%;
+    width: 4.8rem;
+    transition: all 0.2s;
+}
+.img-persona:hover {
+    -webkit-box-shadow: 9px 9px 22px -6px rgba(0,0,0,0.54);
+    -moz-box-shadow: 9px 9px 22px -6px rgba(0,0,0,0.54);
+    box-shadow: 9px 9px 22px -6px rgba(0,0,0,0.54);
+}
+
+/*Footer*/
+.nombre-persona {
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.atribucion {
+    a {
+        text-decoration: none;
+        color: var(--primario);
+    }
+}
+
+
+
+
+
